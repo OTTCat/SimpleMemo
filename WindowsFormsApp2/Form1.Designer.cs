@@ -30,17 +30,17 @@
         {
             this.tapMenu = new System.Windows.Forms.TabControl();
             this.tpRead = new System.Windows.Forms.TabPage();
-            this.tpWrite = new System.Windows.Forms.TabPage();
-            this.btnRPath = new System.Windows.Forms.Button();
-            this.btnRARead = new System.Windows.Forms.Button();
-            this.btnRLRead = new System.Windows.Forms.Button();
-            this.txtRPath = new System.Windows.Forms.TextBox();
             this.txtRView = new System.Windows.Forms.TextBox();
-            this.txtWPath = new System.Windows.Forms.TextBox();
-            this.txtWView = new System.Windows.Forms.TextBox();
+            this.txtRPath = new System.Windows.Forms.TextBox();
+            this.btnRLRead = new System.Windows.Forms.Button();
+            this.btnRARead = new System.Windows.Forms.Button();
+            this.btnRPath = new System.Windows.Forms.Button();
+            this.tpWrite = new System.Windows.Forms.TabPage();
+            this.btnWPath = new System.Windows.Forms.Button();
             this.btnWLSave = new System.Windows.Forms.Button();
             this.btnWASave = new System.Windows.Forms.Button();
-            this.btnWPath = new System.Windows.Forms.Button();
+            this.txtWView = new System.Windows.Forms.TextBox();
+            this.txtWPath = new System.Windows.Forms.TextBox();
             this.sfdFile = new System.Windows.Forms.SaveFileDialog();
             this.ofdFile = new System.Windows.Forms.OpenFileDialog();
             this.tapMenu.SuspendLayout();
@@ -74,6 +74,55 @@
             this.tpRead.Text = "파일 읽기";
             this.tpRead.UseVisualStyleBackColor = true;
             // 
+            // txtRView
+            // 
+            this.txtRView.Location = new System.Drawing.Point(23, 126);
+            this.txtRView.Multiline = true;
+            this.txtRView.Name = "txtRView";
+            this.txtRView.ReadOnly = true;
+            this.txtRView.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtRView.Size = new System.Drawing.Size(694, 219);
+            this.txtRView.TabIndex = 4;
+            this.txtRView.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtRPath
+            // 
+            this.txtRPath.Location = new System.Drawing.Point(23, 36);
+            this.txtRPath.Name = "txtRPath";
+            this.txtRPath.ReadOnly = true;
+            this.txtRPath.Size = new System.Drawing.Size(544, 21);
+            this.txtRPath.TabIndex = 3;
+            // 
+            // btnRLRead
+            // 
+            this.btnRLRead.Location = new System.Drawing.Point(115, 78);
+            this.btnRLRead.Name = "btnRLRead";
+            this.btnRLRead.Size = new System.Drawing.Size(75, 23);
+            this.btnRLRead.TabIndex = 2;
+            this.btnRLRead.Text = "라인읽기";
+            this.btnRLRead.UseVisualStyleBackColor = true;
+            this.btnRLRead.Click += new System.EventHandler(this.btnRLRead_Click);
+            // 
+            // btnRARead
+            // 
+            this.btnRARead.Location = new System.Drawing.Point(23, 78);
+            this.btnRARead.Name = "btnRARead";
+            this.btnRARead.Size = new System.Drawing.Size(75, 23);
+            this.btnRARead.TabIndex = 1;
+            this.btnRARead.Text = "전체읽기";
+            this.btnRARead.UseVisualStyleBackColor = true;
+            this.btnRARead.Click += new System.EventHandler(this.btnRARead_Click);
+            // 
+            // btnRPath
+            // 
+            this.btnRPath.Location = new System.Drawing.Point(592, 36);
+            this.btnRPath.Name = "btnRPath";
+            this.btnRPath.Size = new System.Drawing.Size(75, 23);
+            this.btnRPath.TabIndex = 0;
+            this.btnRPath.Text = "파일";
+            this.btnRPath.UseVisualStyleBackColor = true;
+            this.btnRPath.Click += new System.EventHandler(this.btnRPath_Click);
+            // 
             // tpWrite
             // 
             this.tpWrite.Controls.Add(this.btnWPath);
@@ -90,70 +139,15 @@
             this.tpWrite.Text = "파일 쓰기";
             this.tpWrite.UseVisualStyleBackColor = true;
             // 
-            // btnRPath
+            // btnWPath
             // 
-            this.btnRPath.Location = new System.Drawing.Point(592, 36);
-            this.btnRPath.Name = "btnRPath";
-            this.btnRPath.Size = new System.Drawing.Size(75, 23);
-            this.btnRPath.TabIndex = 0;
-            this.btnRPath.Text = "파일";
-            this.btnRPath.UseVisualStyleBackColor = true;
-            this.btnRPath.Click += new System.EventHandler(this.btnRPath_Click);
-            // 
-            // btnRARead
-            // 
-            this.btnRARead.Location = new System.Drawing.Point(23, 78);
-            this.btnRARead.Name = "btnRARead";
-            this.btnRARead.Size = new System.Drawing.Size(75, 23);
-            this.btnRARead.TabIndex = 1;
-            this.btnRARead.Text = "전체읽기";
-            this.btnRARead.UseVisualStyleBackColor = true;
-            this.btnRARead.Click += new System.EventHandler(this.btnRARead_Click);
-            // 
-            // btnRLRead
-            // 
-            this.btnRLRead.Location = new System.Drawing.Point(115, 78);
-            this.btnRLRead.Name = "btnRLRead";
-            this.btnRLRead.Size = new System.Drawing.Size(75, 23);
-            this.btnRLRead.TabIndex = 2;
-            this.btnRLRead.Text = "라인읽기";
-            this.btnRLRead.UseVisualStyleBackColor = true;
-            // 
-            // txtRPath
-            // 
-            this.txtRPath.Location = new System.Drawing.Point(23, 36);
-            this.txtRPath.Name = "txtRPath";
-            this.txtRPath.ReadOnly = true;
-            this.txtRPath.Size = new System.Drawing.Size(544, 21);
-            this.txtRPath.TabIndex = 3;
-            // 
-            // txtRView
-            // 
-            this.txtRView.Location = new System.Drawing.Point(23, 126);
-            this.txtRView.Multiline = true;
-            this.txtRView.Name = "txtRView";
-            this.txtRView.ReadOnly = true;
-            this.txtRView.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtRView.Size = new System.Drawing.Size(694, 219);
-            this.txtRView.TabIndex = 4;
-            this.txtRView.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // txtWPath
-            // 
-            this.txtWPath.Location = new System.Drawing.Point(21, 50);
-            this.txtWPath.Name = "txtWPath";
-            this.txtWPath.ReadOnly = true;
-            this.txtWPath.Size = new System.Drawing.Size(544, 21);
-            this.txtWPath.TabIndex = 4;
-            // 
-            // txtWView
-            // 
-            this.txtWView.Location = new System.Drawing.Point(21, 135);
-            this.txtWView.Multiline = true;
-            this.txtWView.Name = "txtWView";
-            this.txtWView.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtWView.Size = new System.Drawing.Size(694, 219);
-            this.txtWView.TabIndex = 5;
+            this.btnWPath.Location = new System.Drawing.Point(596, 50);
+            this.btnWPath.Name = "btnWPath";
+            this.btnWPath.Size = new System.Drawing.Size(75, 23);
+            this.btnWPath.TabIndex = 8;
+            this.btnWPath.Text = "파일";
+            this.btnWPath.UseVisualStyleBackColor = true;
+            this.btnWPath.Click += new System.EventHandler(this.btnWPath_Click);
             // 
             // btnWLSave
             // 
@@ -173,15 +167,22 @@
             this.btnWASave.Text = "전체저장";
             this.btnWASave.UseVisualStyleBackColor = true;
             // 
-            // btnWPath
+            // txtWView
             // 
-            this.btnWPath.Location = new System.Drawing.Point(596, 50);
-            this.btnWPath.Name = "btnWPath";
-            this.btnWPath.Size = new System.Drawing.Size(75, 23);
-            this.btnWPath.TabIndex = 8;
-            this.btnWPath.Text = "파일";
-            this.btnWPath.UseVisualStyleBackColor = true;
-            this.btnWPath.Click += new System.EventHandler(this.btnWPath_Click);
+            this.txtWView.Location = new System.Drawing.Point(21, 135);
+            this.txtWView.Multiline = true;
+            this.txtWView.Name = "txtWView";
+            this.txtWView.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtWView.Size = new System.Drawing.Size(694, 219);
+            this.txtWView.TabIndex = 5;
+            // 
+            // txtWPath
+            // 
+            this.txtWPath.Location = new System.Drawing.Point(21, 50);
+            this.txtWPath.Name = "txtWPath";
+            this.txtWPath.ReadOnly = true;
+            this.txtWPath.Size = new System.Drawing.Size(544, 21);
+            this.txtWPath.TabIndex = 4;
             // 
             // sfdFile
             // 

@@ -68,6 +68,29 @@ namespace WindowsFormsApp2
             }
         }
 
-        
+        private void btnRLRead_Click(object sender, EventArgs e)
+        {
+            if(TxtCheck() == false)
+            {
+                return;
+            }
+            this.txtRView.Clear();
+            if (File.Exists(this.txtRPath.Text))
+            {
+                using(StreamReader sr = new StreamReader(this.txtRPath.Text, Encoding.Default))
+                {
+                    string line = null;
+                    while((line = sr.ReadLine()) != null)
+                    {
+                        this.txtRView.AppendText(line + "\r\n");
+                    }
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("읽을 파일이 없습니다.", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
