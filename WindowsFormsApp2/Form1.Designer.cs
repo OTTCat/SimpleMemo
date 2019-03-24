@@ -83,7 +83,6 @@
             this.txtRView.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtRView.Size = new System.Drawing.Size(694, 219);
             this.txtRView.TabIndex = 4;
-            this.txtRView.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtRPath
             // 
@@ -101,7 +100,7 @@
             this.btnRLRead.TabIndex = 2;
             this.btnRLRead.Text = "라인읽기";
             this.btnRLRead.UseVisualStyleBackColor = true;
-            this.btnRLRead.Click += new System.EventHandler(this.btnRLRead_Click);
+            this.btnRLRead.Click += new System.EventHandler(this.BtnRLRead_Click);
             // 
             // btnRARead
             // 
@@ -111,7 +110,7 @@
             this.btnRARead.TabIndex = 1;
             this.btnRARead.Text = "전체읽기";
             this.btnRARead.UseVisualStyleBackColor = true;
-            this.btnRARead.Click += new System.EventHandler(this.btnRARead_Click);
+            this.btnRARead.Click += new System.EventHandler(this.BtnRARead_Click);
             // 
             // btnRPath
             // 
@@ -121,7 +120,7 @@
             this.btnRPath.TabIndex = 0;
             this.btnRPath.Text = "파일";
             this.btnRPath.UseVisualStyleBackColor = true;
-            this.btnRPath.Click += new System.EventHandler(this.btnRPath_Click);
+            this.btnRPath.Click += new System.EventHandler(this.BtnRPath_Click);
             // 
             // tpWrite
             // 
@@ -147,7 +146,6 @@
             this.btnWPath.TabIndex = 8;
             this.btnWPath.Text = "파일";
             this.btnWPath.UseVisualStyleBackColor = true;
-            this.btnWPath.Click += new System.EventHandler(this.btnWPath_Click);
             // 
             // btnWLSave
             // 

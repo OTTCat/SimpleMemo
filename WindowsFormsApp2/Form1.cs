@@ -18,17 +18,11 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
+      
 
-        private void btnWPath_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRPath_Click(object sender, EventArgs e)
+        private void BtnRPath_Click(object sender, EventArgs e)
         {
             if(this.ofdFile.ShowDialog() == DialogResult.OK)
             {
@@ -36,7 +30,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void btnRARead_Click(object sender, EventArgs e)
+        private void BtnRARead_Click(object sender, EventArgs e)
         {
             if(TxtCheck() == false)
             {
@@ -68,7 +62,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void btnRLRead_Click(object sender, EventArgs e)
+        private void BtnRLRead_Click(object sender, EventArgs e)
         {
             if(TxtCheck() == false)
             {
