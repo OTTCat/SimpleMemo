@@ -86,5 +86,28 @@ namespace WindowsFormsApp2
                 MessageBox.Show("읽을 파일이 없습니다.", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BtnWASave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(this.txtWPath.Text))
+                {
+                    sw.WriteLine(this.txtWView.Text);
+                }
+            }
+            catch { return; }
+            MessageBox.Show("파일이 정상적으로 저장되었습니다.", "알림",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnWPath_Click(object sender, EventArgs e)
+        {
+
+            if (this.sfdFile.ShowDialog() == DialogResult.OK)
+            {
+                this.txtWPath.Text = this.sfdFile.FileName;
+            }
+        }
     }
 }

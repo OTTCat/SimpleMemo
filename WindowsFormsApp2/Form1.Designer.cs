@@ -146,6 +146,7 @@
             this.btnWPath.TabIndex = 8;
             this.btnWPath.Text = "파일";
             this.btnWPath.UseVisualStyleBackColor = true;
+            this.btnWPath.Click += new System.EventHandler(this.BtnWPath_Click);
             // 
             // btnWLSave
             // 
@@ -164,6 +165,7 @@
             this.btnWASave.TabIndex = 6;
             this.btnWASave.Text = "전체저장";
             this.btnWASave.UseVisualStyleBackColor = true;
+            this.btnWASave.Click += new System.EventHandler(this.BtnWASave_Click);
             // 
             // txtWView
             // 
