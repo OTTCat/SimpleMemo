@@ -109,5 +109,22 @@ namespace WindowsFormsApp2
                 this.txtWPath.Text = this.sfdFile.FileName;
             }
         }
+
+        private void BtnWLSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(this.txtWPath.Text))
+                {
+                    foreach (var str in this.txtWView.Lines)
+                    {
+                        sw.WriteLine(str);
+                    }
+                }
+            }
+            catch { return; }
+            MessageBox.Show("파일이 정상적으로 저장되었습니다.", "알림",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

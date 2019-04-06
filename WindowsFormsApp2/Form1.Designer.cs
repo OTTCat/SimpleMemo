@@ -156,6 +156,7 @@
             this.btnWLSave.TabIndex = 7;
             this.btnWLSave.Text = "라인저장";
             this.btnWLSave.UseVisualStyleBackColor = true;
+            this.btnWLSave.Click += new System.EventHandler(this.BtnWLSave_Click);
             // 
             // btnWASave
             // 
